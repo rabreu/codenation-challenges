@@ -1,29 +1,35 @@
 package com.challenge.entity;
 
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-@Entity @EntityListeners(submissionListener.class)
+@Entity
+@EntityListeners(AuditingEntityListener.class)
 public class submission {
 
-    @EmbeddedId @Embedded
-    private submissionEmbeddable submissionEmbeddable;
+    @EmbeddedId
+    @Embedded
+    private submissionId submissionId;
 
-    @Column @NotNull
+    @Column
+    @NotNull
     private float score;
 
-    @Column @NotNull @CreatedDate
+    @Column
+    @NotNull
+    @CreatedDate
     private Date createdat;
 
-    public com.challenge.entity.submissionEmbeddable getSubmissionEmbeddable() {
-        return submissionEmbeddable;
+    public submissionId getSubmissionId() {
+        return submissionId;
     }
 
-    public void setSubmissionEmbeddable(com.challenge.entity.submissionEmbeddable submissionEmbeddable) {
-        this.submissionEmbeddable = submissionEmbeddable;
+    public void setSubmissionId(submissionId submissionId) {
+        this.submissionId = submissionId;
     }
 
     public float getScore() {

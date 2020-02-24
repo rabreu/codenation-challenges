@@ -1,21 +1,27 @@
 package com.challenge.entity;
 
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-@Entity @EntityListeners(candidateListener.class)
+@Entity
+@EntityListeners(AuditingEntityListener.class)
 public class candidate {
 
-    @EmbeddedId @Embedded
-    private candidateEmbeddable candidateEmbeddable;
+    @EmbeddedId
+    @Embedded
+    private candidateId candidateId;
 
-    @Column @NotNull
+    @Column
+    @NotNull
     private int status;
 
-    @Column @NotNull @CreatedDate
+    @Column
+    @NotNull
+    @CreatedDate
     private Date createdat;
 
     public int getStatus() {

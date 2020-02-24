@@ -1,6 +1,7 @@
 package com.challenge.entity;
 
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -9,25 +10,38 @@ import javax.validation.constraints.Size;
 import java.util.Collection;
 import java.util.Date;
 
-@Entity @EntityListeners(userListener.class)
+@Entity
+@EntityListeners(AuditingEntityListener.class)
 public class user {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(length = 100) @Size(max = 100) @NotNull
+    @Column(length = 100)
+    @Size(max = 100)
+    @NotNull
     private String fullname;
 
-    @Column(length = 100) @Size(max = 100) @NotNull @Email
+    @Column(length = 100)
+    @Size(max = 100)
+    @NotNull
+    @Email
     private String email;
 
-    @Column(length = 50) @Size(max = 50) @NotNull
+    @Column(length = 50)
+    @Size(max = 50)
+    @NotNull
     private String nickname;
 
-    @Column(length = 255) @NotNull @Size(max = 255)
+    @Column(length = 255)
+    @NotNull
+    @Size(max = 255)
     private String Password;
 
-    @Column @NotNull @CreatedDate
+    @Column
+    @NotNull
+    @CreatedDate
     private Date createdat;
 
     @OneToMany

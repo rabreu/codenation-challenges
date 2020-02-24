@@ -1,6 +1,7 @@
 package com.challenge.entity;
 
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -8,7 +9,7 @@ import javax.validation.constraints.Size;
 import java.util.Collection;
 import java.util.Date;
 
-@Entity @EntityListeners(accelerationListener.class)
+@Entity @EntityListeners(AuditingEntityListener.class)
 public class acceleration {
     @Id @GeneratedValue
     private int id;
@@ -20,7 +21,7 @@ public class acceleration {
     private String slug;
 
     @ManyToOne
-    @JoinColumn(name = "challenge_id")
+    @JoinColumn(referencedColumnName = "challenge_id")
     private challenge challenge;
 
     @Column @NotNull @CreatedDate
