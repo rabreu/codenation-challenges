@@ -1,0 +1,16 @@
+/home/renata/codenation/java-10/src/main/java/com/challenge/entity/CandidateId.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/service/interfaces/CandidateServiceInterface.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/service/interfaces/AccelerationServiceInterface.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/service/interfaces/ServiceInterface.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/entity/Submission.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/entity/Acceleration.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/service/interfaces/ChallengeServiceInterface.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/service/interfaces/CompanyServiceInterface.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/service/interfaces/SubmissionServiceInterface.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/entity/Candidate.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/entity/Challenge.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/service/interfaces/UserServiceInterface.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/entity/User.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/entity/Company.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/entity/SubmissionId.java
+/home/renata/codenation/java-10/src/main/java/com/challenge/SpringChallengeApplication.java

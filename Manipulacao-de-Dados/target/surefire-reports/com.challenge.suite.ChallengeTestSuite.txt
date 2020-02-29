@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.challenge.suite.ChallengeTestSuite
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 10.044 s <<< FAILURE! - in com.challenge.suite.ChallengeTestSuite
+whenSave(com.challenge.suite.UserServiceTest)  Time elapsed: 0.078 s  <<< ERROR!
+java.lang.StackOverflowError
+
